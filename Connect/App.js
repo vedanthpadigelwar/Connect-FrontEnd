@@ -9,7 +9,11 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
+
+import HomeScreen from './screens/HomeScreen';
+import DetailsScreen from './screens/DetailsScreen';
 
 import {
   SafeAreaView,
@@ -17,27 +21,54 @@ import {
   ScrollView,
   View,
   Text,
+  Button,
   StatusBar,
 } from 'react-native';
 
 
 
-const HomeScreen = () =>{
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
-    </View>
-  );
-}
+const HomeStack = createStackNavigator();
+const DetailsStack = createStackNavigator();
+const Drawer = createDrawerNavigator();
 
-const Stack = createStackNavigator();
+const HomeStackScreen = ({navigation}) =>(
+  <HomeStack.Navigator  screenOptions={{
+    headerStyle: {
+      backgroundColor: '#FFD133',
+    },
+    headerTintColor: '#323142',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+      alignSelf: 'center' 
+    },
+  }}>
+    <HomeStack.Screen name="Home" component={HomeScreen} options={{title:"CONNECT"}}/>
+  </HomeStack.Navigator>
+  );
+
+  const DetailsStackScreen = ({navigation}) =>(
+    <DetailsStack.Navigator  screenOptions={{
+      headerStyle: {
+        backgroundColor: '#FFD133',
+      },
+      headerTintColor: '#323142',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+        alignSelf: 'center' 
+      },
+    }}>
+      <DetailsStack.Screen name="Details" component={DetailsScreen} options={{}}/>
+    </DetailsStack.Navigator>
+    );
+
 
 const App = () =>{
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-      </Stack.Navigator>
+      <Drawer.Navigator initialRouteName="Home">
+          <Drawer.Screen name="Home" component={HomeStackScreen} />
+          <Drawer.Screen name="Details" component={DetailsStackScreen} />
+      </Drawer.Navigator>
     </NavigationContainer>
   );
 }
