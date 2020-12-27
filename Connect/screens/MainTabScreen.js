@@ -4,14 +4,15 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import { createStackNavigator } from '@react-navigation/stack';
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Icon from 'react-native-vector-icons/Ionicons';
 
-
+import HomeScreen from './HomeScreen';
+import DetailsScreen from './DetailsScreen';
 import ExploreScreen from './ExploreScreen';
 import ProfileScreen from './ProfileScreen';
 
 const HomeStack = createStackNavigator();
 const DetailsStack = createStackNavigator();
-
 const Tab = createMaterialBottomTabNavigator();
 
 const MainTabScreen = () => (
@@ -24,9 +25,9 @@ const MainTabScreen = () => (
         component={HomeStackScreen}
         options={{
           tabBarLabel: 'Home',
-          tabBarColor: '#009387',
+          tabBarColor: '#FFD133',
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="home" color={color} size={26} />
+            <Icon name="ios-home" color={color} size={26} />
           ),
         }}
       />
@@ -37,7 +38,7 @@ const MainTabScreen = () => (
           tabBarLabel: 'Updates',
           tabBarColor: '#1f65ff',
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="notifications" color={color} size={26} />
+            <Icon name="ios-notifications" color={color} size={26} />
           ),
         }}
       />
@@ -48,7 +49,7 @@ const MainTabScreen = () => (
           tabBarLabel: 'Profile',
           tabBarColor: '#694fad',
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="person" color={color} size={26} />
+            <Icon name="ios-person" color={color} size={26} />
           ),
         }}
       />
@@ -59,7 +60,7 @@ const MainTabScreen = () => (
           tabBarLabel: 'Explore',
           tabBarColor: '#d02860',
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="aperture" color={color} size={26} />
+            <Icon name="ios-aperture" color={color} size={26} />
           ),
         }}
       />
@@ -68,29 +69,43 @@ const MainTabScreen = () => (
 
 export default MainTabScreen;
 
-const HomeStackScreen = ({navigation}) => (
-<HomeStack.Navigator screenOptions={{
-        headerStyle: {
-        backgroundColor: '#009387',
-        },
-        headerTintColor: '#fff',
-        headerTitleStyle: {
-        fontWeight: 'bold'
-        }
-    }}>
-        <HomeStack.Screen name="Home" component={HomeScreen}/>
-</HomeStack.Navigator>
-);
+const HomeStackScreen = ({navigation}) =>(
+  <HomeStack.Navigator  screenOptions={{
+    headerStyle: {
+      backgroundColor: '#FFD133',
+    },
+    headerTintColor: '#323142',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+      
+    },
+  }}>
+  <HomeStack.Screen name="Home" component={HomeScreen} options={{
+    title:"CONNECT",
+    headerLeft: () => (
+      <Icon.Button name="ios-menu" size={25} backgroundColor="#FFD133" onPress={() => navigation.openDrawer()}></Icon.Button>
+    )
+  }}/>
 
-const DetailsStackScreen = ({navigation}) => (
-<DetailsStack.Navigator screenOptions={{
-        headerStyle: {
+  </HomeStack.Navigator>
+  );
+
+  const DetailsStackScreen = ({navigation}) =>(
+    <DetailsStack.Navigator  screenOptions={{
+      headerStyle: {
         backgroundColor: '#1f65ff',
-        },
-        headerTintColor: '#fff',
-        headerTitleStyle: {
-        fontWeight: 'bold'
-        }
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+        //alignSelf: 'center' 
+      },
     }}>
-</DetailsStack.Navigator>
-);
+      <DetailsStack.Screen name="Details" component={DetailsScreen} options={{title:"CONNECT",
+    headerLeft: () => (
+      <Icon.Button name="ios-menu" size={25} backgroundColor="#1f65ff" onPress={() => navigation.openDrawer()}></Icon.Button>
+    )
+    }}/>
+    </DetailsStack.Navigator>
+    );
+
