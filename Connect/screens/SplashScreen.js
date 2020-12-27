@@ -11,10 +11,10 @@ const SplashScreen = ({navigation}) => {
         <View style={styles.header}>
           <Animatable.Image
             animation="bounce"
-            duration= "1500"
-          source={require("../assets/logo.png")} 
-          style={styles.logo} 
-          resizeMode="stretch"/>
+            duration= {1500}
+            source={require("../assets/logo.png")} 
+            style={styles.logo} 
+            resizeMode="stretch"/>
         </View>
         <Animatable.View 
         style={styles.footer}

@@ -101,6 +101,7 @@ const SignInScreen = ({navigation}) => {
             />
             <TouchableOpacity
               onPress={updateSecureTextEntry}
+              
             >
               {data.seek_textInputChange ? 
                 <Feather 
@@ -126,8 +127,8 @@ const SignInScreen = ({navigation}) => {
                 <Text style={[styles.textSign,{color:'#fff'}]}>Sign In </Text>
               </LinearGradient>
 
-              <TouchableOpacity onPress={() => navigation.navigate("SignUpScreen")} style={[ styles.signIn, { borderColor:'323142',borderWidth:1, marginTop:15 }]}>
-                <Text style={[styles.textSign, {color:'323142'}]}>Sign Up </Text>
+              <TouchableOpacity onPress={() => navigation.navigate("SignUpScreen")} style={[ styles.signIn, { borderColor:'#323142',borderWidth:1, marginTop:15 }]}>
+                <Text style={[styles.textSign, {color:'#323142'}]}>Sign Up </Text>
               </TouchableOpacity>
           </View>
         </Animatable.View>

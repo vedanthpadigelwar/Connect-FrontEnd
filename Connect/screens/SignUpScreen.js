@@ -180,7 +180,7 @@ const SignInScreen = ({navigation}) => {
                 <Text style={[styles.textSign,{color:'#fff'}]}>Sign Up </Text>
               </LinearGradient>
 
-              <TouchableOpacity onPress={() => navigation.navigate("SignInScreen")} style={[ styles.signIn, { borderColor:'323142',borderWidth:1, marginTop:15 }]}>
+              <TouchableOpacity onPress={() => navigation.navigate("SignInScreen")} style={[ styles.signIn, { borderColor:'#323142',borderWidth:1, marginTop:15 }]}>
                 <Text style={[styles.textSign, {color:'#323142'}]}>Sign In </Text>
               </TouchableOpacity>
           </View>
