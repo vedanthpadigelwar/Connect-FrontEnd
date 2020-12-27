@@ -100,10 +100,9 @@ const SignInScreen = ({navigation}) => {
               onChangeText={(val)=>handlePasswordChange(val)}
             />
             <TouchableOpacity
-              onPress={updateSecureTextEntry}
-              
+              onPress={updateSecureTextEntry}  
             >
-              {data.seek_textInputChange ? 
+              {data.secureTextEntry ? 
                 <Feather 
                   name="eye-off"
                   color="grey"
