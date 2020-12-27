@@ -93,7 +93,7 @@ export function DrawerContent(props){
                         <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
-                                name="settings-outline" 
+                                name="settings-helper" 
                                 color={color}
                                 size={size}
                                 />
