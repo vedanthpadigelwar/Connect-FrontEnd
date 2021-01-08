@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 
-const ExploreScreen = ({navigation}) => {
+const CardsScreen = ({navigation}) => {
     return (
       <View style={styles.container}>
-        <Text>Explore Screen</Text>
+        <Text>Cards Screen</Text>
         <Button
             title="click here"
             onPress={() => alert("Button clicked")}
@@ -13,7 +13,7 @@ const ExploreScreen = ({navigation}) => {
     );
 };
 
-export default ExploreScreen;
+export default CardsScreen;
 
 const styles = StyleSheet.create({
   container: {

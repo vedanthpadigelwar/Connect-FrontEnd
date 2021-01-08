@@ -71,13 +71,13 @@ export function DrawerContent(props){
                         <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
-                                name="account-outline" 
+                                name="animation-outline" 
                                 color={color}
                                 size={size}
                                 />
                             )}
-                            label="Profile"
-                            onPress={() => {props.navigation.navigate('Profile')}}
+                            label="Cards"
+                            onPress={() => {props.navigation.navigate('Cards')}}
                         />
                         <DrawerItem 
                             icon={({color, size}) => (

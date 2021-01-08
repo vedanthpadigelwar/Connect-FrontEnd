@@ -6,12 +6,12 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import HomeScreen from './HomeScreen';
-import DetailsScreen from './DetailsScreen';
-import ExploreScreen from './ExploreScreen';
-import ProfileScreen from './ProfileScreen';
+import SearchScreen from './SearchScreen';
+import MenuScreen from './MenuScreen';
+import CardsScreen from './CardsScreen';
 
 const HomeStack = createStackNavigator();
-const DetailsStack = createStackNavigator();
+const SearchStack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
 
 const MainTabScreen = () => (
@@ -31,35 +31,35 @@ const MainTabScreen = () => (
         }}
       />
       <Tab.Screen
-        name="Notifications"
-        component={DetailsStackScreen}
+        name="Search"
+        component={SearchStackScreen}
         options={{
-          tabBarLabel: 'Updates',
+          tabBarLabel: 'Search',
           tabBarColor: '#1f65ff',
           tabBarIcon: ({ color }) => (
-            <Icon name="ios-notifications" color={color} size={26} />
+            <Icon name="ios-search" color={color} size={26} />
           ),
         }}
       />
       <Tab.Screen
-        name="Profile"
-        component={ProfileScreen}
+        name="Cards"
+        component={CardsScreen}
         options={{
-          tabBarLabel: 'Profile',
+          tabBarLabel: 'Cards',
           tabBarColor: '#694fad',
           tabBarIcon: ({ color }) => (
-            <Icon name="ios-person" color={color} size={26} />
+            <Icon name="ios-albums" color={color} size={26} />
           ),
         }}
       />
       <Tab.Screen
-        name="Explore"
-        component={ExploreScreen}
+        name="Menu"
+        component={MenuScreen}
         options={{
-          tabBarLabel: 'Explore',
+          tabBarLabel: 'Menu',
           tabBarColor: '#d02860',
           tabBarIcon: ({ color }) => (
-            <Icon name="ios-aperture" color={color} size={26} />
+            <Icon name="ios-menu" color={color} size={26} />
           ),
         }}
       />
@@ -89,8 +89,8 @@ const HomeStackScreen = ({navigation}) =>(
   </HomeStack.Navigator>
   );
 
-  const DetailsStackScreen = ({navigation}) =>(
-    <DetailsStack.Navigator  screenOptions={{
+  const SearchStackScreen = ({navigation}) =>(
+    <SearchStack.Navigator  screenOptions={{
       headerStyle: {
         backgroundColor: '#1f65ff',
       },
@@ -100,11 +100,11 @@ const HomeStackScreen = ({navigation}) =>(
         //alignSelf: 'center' 
       },
     }}>
-      <DetailsStack.Screen name="Details" component={DetailsScreen} options={{title:"CONNECT",
+      <SearchStack.Screen name="Search" component={SearchScreen} options={{title:"CONNECT",
     headerLeft: () => (
       <Icon.Button name="ios-menu" size={25} backgroundColor="#1f65ff" onPress={() => navigation.openDrawer()}></Icon.Button>
     )
     }}/>
-    </DetailsStack.Navigator>
+    </SearchStack.Navigator>
     );
 
