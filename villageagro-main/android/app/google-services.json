@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "687304995639",
+    "project_id": "villageagro-app",
+    "storage_bucket": "villageagro-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687304995639:android:20f7b874fcf5c7d5f4e0b2",
+        "android_client_info": {
+          "package_name": "com.villageagro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "687304995639-viicp4852ln37cqje8ov7hs5ustgm62f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.villageagro",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "687304995639-er25jod0pv7smqoeta9skien2rlnenss.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdBmR05Tm71fNf3WGwrm9MBYDEWNLxxFo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "687304995639-er25jod0pv7smqoeta9skien2rlnenss.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
