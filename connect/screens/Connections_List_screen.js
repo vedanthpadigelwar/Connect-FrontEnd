@@ -1,16 +1,19 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 
-const AboutYourCropScreen = ({}) => {
+const Connections_List_screen = ({navigation}) => {
     return (
       <View style={styles.container}>
-        <Text>About your crop Screen</Text>
-
+        <Text>Connections List Screen</Text>
+        <Button
+            title="click here"
+            onPress={() => alert("Button clicked")}
+        />
       </View>
     );
 };
 
-export default AboutYourCropScreen;
+export default Connections_List_screen;
 
 const styles = StyleSheet.create({
   container: {

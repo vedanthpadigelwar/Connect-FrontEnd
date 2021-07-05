@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "villageagro-tvOS.app"
-               BlueprintName = "villageagro-tvOS"
-               ReferencedContainer = "container:villageagro.xcodeproj">
+               BuildableName = "connect-tvOS.app"
+               BlueprintName = "connect-tvOS"
+               ReferencedContainer = "container:connect.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "villageagro-tvOSTests.xctest"
-               BlueprintName = "villageagro-tvOSTests"
-               ReferencedContainer = "container:villageagro.xcodeproj">
+               BuildableName = "connect-tvOSTests.xctest"
+               BlueprintName = "connect-tvOSTests"
+               ReferencedContainer = "container:connect.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "villageagro-tvOS.app"
-            BlueprintName = "villageagro-tvOS"
-            ReferencedContainer = "container:villageagro.xcodeproj">
+            BuildableName = "connect-tvOS.app"
+            BlueprintName = "connect-tvOS"
+            ReferencedContainer = "container:connect.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "villageagro-tvOS.app"
-            BlueprintName = "villageagro-tvOS"
-            ReferencedContainer = "container:villageagro.xcodeproj">
+            BuildableName = "connect-tvOS.app"
+            BlueprintName = "connect-tvOS"
+            ReferencedContainer = "container:connect.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
