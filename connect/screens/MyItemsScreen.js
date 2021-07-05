@@ -4,7 +4,7 @@ import { View, Text, Button, StyleSheet } from 'react-native';
 const MyItemsScreen = ({}) => {
     return (
       <View style={styles.container}>
-        <Text>Bookmark Screen</Text>
+        <Text>Bookmark </Text>
         <Button
             title="click here"
             onPress={() => alert("Button clicked")}

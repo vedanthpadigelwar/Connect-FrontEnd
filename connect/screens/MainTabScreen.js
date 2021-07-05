@@ -4,18 +4,13 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import HomeScreen from './HomeScreen';
-import WhatsappScreen from './WhatsappScreen';
+import Connections_List_screen from './Connections_List_screen';
 import ProfileScreen from './ProfileScreen';
 
-import AboutYourCropScreen from './AboutYourCropScreen';
-import TestingScreen from './TestingScreen';
-import WeatherScreen from './WeatherScreen';
-import NewsScreen from './NewsScreen';
-import Market_pricesScreen from './Market_pricesScreen';
-import DidYouKnowScreen from './DidYouKnowScreen';
+
 
 const HomeStack = createStackNavigator();
-const WhatsappStack = createStackNavigator();
+const Connections_List_Stack = createStackNavigator();
 const ProfileStack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
 
@@ -27,12 +22,12 @@ const MainTabScreen = () => (
 	>
 
     <Tab.Screen
-      name="Whatsapp"
-      component={WhatsappStackScreen}
+      name="Connections"
+      component={Connections_List_Stack_Screen}
       options={{
-        tabBarLabel: 'Whatsapp',
+        tabBarLabel: 'Connections',
         tabBarIcon: ({ color }) => (
-          <Icon name="ios-logo-whatsapp" color={color} size={26} />
+          <Icon name="md-people-sharp" color={color} size={26} />
         ),
       }}
     />
@@ -77,7 +72,7 @@ const HomeStackScreen = ({ navigation }) => (
 
 
 		<HomeStack.Screen name="Home" component={HomeScreen} options={{
-			title: "Villageagro",
+			title: "Connect",
 			headerLeft: () => (
 				<Icon.Button name="ios-menu" size={25} backgroundColor="#3BBB23" onPress={() => navigation.openDrawer()}></Icon.Button>
 			),
@@ -86,78 +81,11 @@ const HomeStackScreen = ({ navigation }) => (
 			)
 		}}
 		/>
-
-		<HomeStack.Screen name="AboutYourCropScreen" component={AboutYourCropScreen} options={{
-			title: "Villageagro",
-			headerLeft: () => (
-				<Icon.Button name="ios-menu" size={25} backgroundColor="#3BBB23" onPress={() => navigation.openDrawer()}></Icon.Button>
-			),
-			headerRight: () => (
-				<Icon.Button name="ios-notifications" size={25} backgroundColor="#3BBB23" onPress={() => alert("coming soon!!")}></Icon.Button>
-			)
-		}}
-		/>
-
-		<HomeStack.Screen name="WeatherScreen" component={WeatherScreen} options={{
-			title: "Villageagro",
-			headerLeft: () => (
-				<Icon.Button name="ios-menu" size={25} backgroundColor="#3BBB23" onPress={() => navigation.openDrawer()}></Icon.Button>
-			),
-			headerRight: () => (
-				<Icon.Button name="ios-notifications" size={25} backgroundColor="#3BBB23" onPress={() => alert("coming soon!!")}></Icon.Button>
-			)
-		}}
-		/>
-
-		<HomeStack.Screen name="NewsScreen" component={NewsScreen} options={{
-			title: "Villageagro",
-			headerLeft: () => (
-				<Icon.Button name="ios-menu" size={25} backgroundColor="#3BBB23" onPress={() => navigation.openDrawer()}></Icon.Button>
-			),
-			headerRight: () => (
-				<Icon.Button name="ios-notifications" size={25} backgroundColor="#3BBB23" onPress={() => alert("coming soon!!")}></Icon.Button>
-			)
-		}}
-		/>
-
-		<HomeStack.Screen name="TestingScreen" component={TestingScreen} options={{
-			title: "Villageagro",
-			headerLeft: () => (
-				<Icon.Button name="ios-menu" size={25} backgroundColor="#3BBB23" onPress={() => navigation.openDrawer()}></Icon.Button>
-			),
-			headerRight: () => (
-				<Icon.Button name="ios-notifications" size={25} backgroundColor="#3BBB23" onPress={() => alert("coming soon!!")}></Icon.Button>
-			)
-		}}
-		/>
-
-		<HomeStack.Screen name="Market_pricesScreen" component={Market_pricesScreen} options={{
-			title: "Villageagro",
-			headerLeft: () => (
-				<Icon.Button name="ios-menu" size={25} backgroundColor="#3BBB23" onPress={() => navigation.openDrawer()}></Icon.Button>
-			),
-			headerRight: () => (
-				<Icon.Button name="ios-notifications" size={25} backgroundColor="#3BBB23" onPress={() => alert("coming soon!!")}></Icon.Button>
-			)
-		}}
-		/>
-
-		<HomeStack.Screen name="DidYouKnowScreen" component={DidYouKnowScreen} options={{
-			title: "Villageagro",
-			headerLeft: () => (
-				<Icon.Button name="ios-menu" size={25} backgroundColor="#3BBB23" onPress={() => navigation.openDrawer()}></Icon.Button>
-			),
-			headerRight: () => (
-				<Icon.Button name="ios-notifications" size={25} backgroundColor="#3BBB23" onPress={() => alert("coming soon!!")}></Icon.Button>
-			)
-		}}
-		/>
-
 	</HomeStack.Navigator>
 );
 
-const  WhatsappStackScreen = ({ navigation }) => (
-	<WhatsappStack.Navigator screenOptions={{
+const  Connections_List_Stack_Screen = ({ navigation }) => (
+	<Connections_List_Stack.Navigator screenOptions={{
 		headerStyle: {
 			backgroundColor: '#3BBB23',
 		},
@@ -167,8 +95,8 @@ const  WhatsappStackScreen = ({ navigation }) => (
 			//alignSelf: 'center' 
 		},
 	}}>
-		<WhatsappStack.Screen name="WhatsappScreen" component={WhatsappScreen} options={{
-			title: "Villageagro",
+		<Connections_List_Stack.Screen name="Connections_List_screen" component={Connections_List_screen} options={{
+			title: "Connect",
 			headerLeft: () => (
 				<Icon.Button name="ios-menu" size={25} backgroundColor="#3BBB23" onPress={() => navigation.openDrawer()}></Icon.Button>
 			),
@@ -176,7 +104,7 @@ const  WhatsappStackScreen = ({ navigation }) => (
 				<Icon.Button name="ios-notifications" size={25} backgroundColor="#3BBB23" onPress={() => alert("coming soon!!")}></Icon.Button>
 			)
 		}} />
-	</WhatsappStack.Navigator>
+	</Connections_List_Stack.Navigator>
 );
 
 const ProfileStackScreen = ({ navigation }) => (
@@ -191,7 +119,7 @@ const ProfileStackScreen = ({ navigation }) => (
 		},
 	}}>
 		<ProfileStack.Screen name="ProfileScreen" component={ProfileScreen} options={{
-			title: "Villageagro",
+			title: "Connect",
 			headerLeft: () => (
 				<Icon.Button name="ios-menu" size={25} backgroundColor="#3BBB23" onPress={() => navigation.openDrawer()}></Icon.Button>
 			),

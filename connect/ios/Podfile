@@ -3,14 +3,14 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'villageagro' do
+target 'connect' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
 
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
-  target 'villageagroTests' do
+  target 'connectTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -25,10 +25,10 @@ target 'villageagro' do
   end
 end
 
-target 'villageagro-tvOS' do
-  # Pods for villageagro-tvOS
+target 'connect-tvOS' do
+  # Pods for connect-tvOS
 
-  target 'villageagro-tvOSTests' do
+  target 'connect-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
