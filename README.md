@@ -36,7 +36,7 @@ node - 15.4.0
 
  # to make a release apk
  https://reactnative.dev/docs/signed-apk-android
- **commands:**
+ ## commands:
  * cd android
  * ./gradlew bundleRelease
  * ./gradlew assembleRelease
